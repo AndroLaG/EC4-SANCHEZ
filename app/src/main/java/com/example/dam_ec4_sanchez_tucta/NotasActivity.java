@@ -24,9 +24,11 @@ public class NotasActivity extends AppCompatActivity
         binding = ActivityNotasBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Configurar la Toolbar como ActionBar
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
@@ -34,6 +36,7 @@ public class NotasActivity extends AppCompatActivity
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
+
 
     @Override
     public void editNotaClick(Nota nota) {

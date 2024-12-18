@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,7 @@ public class NotaFragment extends Fragment {
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 1;
+    private int mColumnCount = 2;
     private NotasInteractionListener mListener;
     private List<Nota> notaList;
     private MyNotaRecyclerViewAdapter adapterNotas;
@@ -66,7 +68,12 @@ public class NotaFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            adapterNotas = new MyNotaRecyclerViewAdapter(notaList,mListener);
+            notaList = new ArrayList<>();
+            notaList.add(new Nota("UC4","Estudiar para la evaluación de la UC4 - Caso: Notas y Listas", true, android.R.color.holo_blue_light));
+            notaList.add(new Nota("Recordar", "He aparcado el coche en la calle República Argentina, no olvidarme en el parque",false, android.R.color.holo_green_light));
+            notaList.add(new Nota("cumpleaños (fiesta)","no olvidar las velas", true, android.R.color.holo_orange_light));
+
+            adapterNotas = new MyNotaRecyclerViewAdapter(notaList, mListener);
             recyclerView.setAdapter(adapterNotas);
         }
         return view;

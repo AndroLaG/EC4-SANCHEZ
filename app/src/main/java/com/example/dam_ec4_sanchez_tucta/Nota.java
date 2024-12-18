@@ -1,6 +1,8 @@
 package com.example.dam_ec4_sanchez_tucta;
 
 public class Nota {
+    public int id;
+    public int content;
     private String titulo;
     private String contenido;
     private boolean favorita;

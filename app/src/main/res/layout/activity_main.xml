@@ -1,91 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:id="@+id/main"
+    android:background="@drawable/fondo2">
 
+
+
+    <!-- Iconos inferiores -->
     <LinearLayout
+        android:id="@+id/footer_icons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <!-- Formulario de inicio de sesión -->
-        <TextView
-            android:id="@+id/label_user"
+        <ImageView
+            android:id="@+id/icon_one"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/baseline_fmd_good_24" />
+
+        <ImageView
+            android:id="@+id/icon_two"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_headset_mic_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="221dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Logo"
+             />
+
+        <!-- Input de Tarjeta -->
+        <EditText
+            android:id="@+id/et_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CFCFCF"
+            android:hint="Número de tarjeta"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <!-- Input de DNI -->
+        <Spinner
+            android:id="@+id/spinner_dni"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:text="Usuario"
-            android:textColor="#FF0000"
-            android:textSize="18sp" />
+            android:backgroundTint="#CFCFCF" />
 
+        <!-- Input de Clave de Internet -->
         <EditText
-            android:id="@+id/input_user"
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_background"
-            android:hint="Ingrese su usuario"
-            android:padding="10dp"
-            android:textColorHint="#FF0000" />
-
-        <TextView
-            android:id="@+id/label_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:text="Contraseña"
-            android:textColor="#FF0000"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/input_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_background"
-            android:hint="Ingrese su contraseña"
-            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#CFCFCF"
+            android:hint="Clave de internet"
             android:inputType="textPassword"
-            android:textColorHint="#FF0000" />
+            android:padding="10dp" />
 
+        <!-- Botón Olvidé la clave -->
         <TextView
-            android:id="@+id/forgot_password"
+            android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:layout_marginTop="8dp"
-            android:layout_gravity="center"
-            android:text="¿Olvidó su contraseña?"
-            android:textColor="#FF0000"
-            android:alpha="0.75"
-            android:textSize="14sp" />
+            android:text="¡La olvidé!"
+            android:textColor="#0096FF"
+            android:textStyle="bold" />
 
+        <!-- Botón Ingresar -->
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FF0000"
+            android:backgroundTint="#D3D3D3"
             android:text="Ingresar"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textColor="#FFFFFF" />
 
+        <!-- Botón Generar Clave -->
+        <Button
+            android:id="@+id/btn_generate_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#C0C0C0"
+            android:text="Generar tu clave de internet"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="224dp"
-        app:srcCompat="@drawable/peru_logo" />
-
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="264dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="42dp"
+        app:srcCompat="@drawable/nacion" />
 </RelativeLayout>
-
