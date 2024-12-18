@@ -9,6 +9,39 @@
 
 
     <!-- Iconos inferiores -->
+
+    <LinearLayout
+        android:id="@+id/elevation"
+        android:layout_width="293dp"
+        android:layout_height="238dp"
+        android:layout_above="@+id/footer_icons"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="54dp"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#D3D3D3"
+            android:text="Ingresar"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_generate_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#C0C0C0"
+            android:text="Generar tu clave de internet"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/footer_icons"
         android:layout_width="match_parent"
@@ -23,6 +56,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="30dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#007E7777"
             android:src="@drawable/baseline_fmd_good_24" />
 
         <ImageView
@@ -33,16 +68,17 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="262dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="209dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="221dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="288dp"
         android:background="#FFFFFF"
         android:orientation="vertical"
         android:padding="24dp">
@@ -54,10 +90,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
-            android:contentDescription="Logo"
-             />
+            android:contentDescription="Logo" />
 
         <!-- Input de Tarjeta -->
+
         <EditText
             android:id="@+id/et_card_number"
             android:layout_width="match_parent"
@@ -69,14 +105,31 @@
             android:textSize="16sp" />
 
         <!-- Input de DNI -->
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <Spinner
             android:id="@+id/spinner_dni"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#CFCFCF" />
+            android:backgroundTint="#CFCFCF"
+            android:entries="@array/spn_clase" />
 
         <!-- Input de Clave de Internet -->
+        <EditText
+            android:id="@+id/et_card_number2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CFCFCF"
+
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
@@ -99,24 +152,8 @@
             android:textStyle="bold" />
 
         <!-- Botón Ingresar -->
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#D3D3D3"
-            android:text="Ingresar"
-            android:textColor="#FFFFFF" />
 
         <!-- Botón Generar Clave -->
-        <Button
-            android:id="@+id/btn_generate_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#C0C0C0"
-            android:text="Generar tu clave de internet"
-            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <ImageView
@@ -126,6 +163,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="35dp"
+
         android:layout_marginEnd="42dp"
         app:srcCompat="@drawable/nacion" />
 </RelativeLayout>

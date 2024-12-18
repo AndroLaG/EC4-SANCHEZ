@@ -7,4 +7,10 @@
     <string name="title_notas">Notas</string>
     <string name="title_favoritas">Favoritas</string>
     <string name="title_user_profile">Mi perfil</string>
+
+    <string-array name="spn_clase">
+        <item>Dni</item>
+        <item>Carnet de Extranjeria</item>
+        <item>Pasaporte</item>
+    </string-array>
 </resources>
